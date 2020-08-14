@@ -70,8 +70,8 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 
-var blueIcon = new L.Icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+var Icon1 = new L.Icon({
+  iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/maps-and-location1.png?raw=true',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
   iconSize: [25, 26],
   iconAnchor: [43, 86],
@@ -79,8 +79,8 @@ var blueIcon = new L.Icon({
   shadowSize: [10, 10]
 });
 
-var yellowIcon = new L.Icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
+var Icon2 = new L.Icon({
+  iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/maps-and-location%202.png?raw=true',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
   iconSize: [25, 26],
   iconAnchor: [43, 86],
@@ -88,8 +88,8 @@ var yellowIcon = new L.Icon({
   shadowSize: [41, 41]
 });
 
-var redIcon = new L.Icon({
-    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+var Icon3 = new L.Icon({
+    iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/maps-and-location%203.png?raw=true',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
     iconSize: [26, 26],
     iconAnchor: [43, 86],
@@ -122,11 +122,11 @@ xhr.onload = function () {
         //將酒吧星級標記不同顏色的圖標
         var imageIcon = blackIcon;
         if (data[i].rating >= 4.5)
-            imageIcon = redIcon;
+            imageIcon = Icon1;
         else if (data[i].rating > 4.0)
-            imageIcon = yellowIcon;
+            imageIcon = Icon2;
         else if (data[i].rating > 3.0)
-            imageIcon = blueIcon;
+            imageIcon = Icon3;
 
         //設定藥局經緯度和 Popup 內容
         var mark = L.marker([
