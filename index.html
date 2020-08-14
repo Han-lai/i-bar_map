@@ -60,18 +60,28 @@ html,body{
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
 <script id="rendered-js">
 var map = L.map("map", {
-  center: [25.037801, 121.548855],
-  zoom: 17
+  center: [25.040959, 121.553324],
+  zoom: 16.5
 });
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution:
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: 
+  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
 }).addTo(map);
+
+    var circle = L.circle([25.040959, 121.553324],   // 圓心座標
+      500,                // 半徑（公尺）
+      {
+          color: 'red',      // 線條顏色
+          fillColor: '#f03', // 填充顏色
+          fillOpacity: 0.1   // 透明度
+      }
+    ).addTo(map);
 
 
 var Icon1 = new L.Icon({
-  iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/maps-and-location1.png?raw=true',
+  iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/alcohol1.png?raw=true',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
   iconSize: [55, 56],
   iconAnchor: [43, 86],
@@ -80,16 +90,16 @@ var Icon1 = new L.Icon({
 });
 
 var Icon2 = new L.Icon({
-  iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/maps-and-location2.png?raw=true',
+  iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/alcohol2.png?raw=true',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
   iconSize: [55, 56],
   iconAnchor: [43, 86],
   popupAnchor: [1, -86],
-  shadowSize: [41, 41]
+  shadowSize: [10, 10]
 });
 
 var Icon3 = new L.Icon({
-    iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/maps-and-location3.png?raw=true',
+    iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/alcohol3.png?raw=true',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
     iconSize: [56, 56],
     iconAnchor: [43, 86],
@@ -134,9 +144,9 @@ xhr.onload = function () {
             data[i].geometry.location.lng
         ], { icon: imageIcon }
         ).bindPopup(
-            '<p class="popup-name"> [  店名 ]' + 
-                data[i].name + '<p/>' +
-            '<p class="popup-phone">  [ 星級 ] ' + 
+            '<h1 class="popup-name"> [  店名 ]' + 
+                data[i].name + '<h1/>' +
+            '<p class="popup-star">  [ 星級 ] ' + 
                 data[i].rating + '<p/>' +
             '<p class="popup-address">[ 地址 ] ' + 
                 data[i].vicinity + '<p/>');
