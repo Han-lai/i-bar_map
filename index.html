@@ -10,7 +10,13 @@ html,body{
   width: 100%;
   height: 100%;
 }
-#map { width: 100%;height: 100%; }
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+
 .marker-cluster-small {
 		background-color: rgba(181, 226, 140, 0.6);
 		}
@@ -49,6 +55,37 @@ html,body{
 	.marker-cluster span {
 		line-height: 30px;
 		}
+
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+.popup-name {
+    padding-left: 10px;
+    border-left: 5px solid rgb(16, 120, 121);
+    color: #000000;
+    font-family: 'cwTeXYen', sans-serif;
+    line-height:2;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.popup-star {
+  padding-left: 10px;
+    border-left: 5px solid rgb(	255,215,0);
+    color: #000000;
+    font-family: 'cwTeXYen', sans-serif;
+    line-height:2;
+    font-size:20px;
+    font-weight: bold;
+}
+
+.popup-address {
+    padding-left: 10px;
+    border-left: 5px solid rgb(220,20,60);
+    color: #000000;
+    font-family: 'cwTeXYen', sans-serif;
+    line-height:2;
+    font-size: larger;
+    font-weight: bold;
+}
 </style>
 </head>
 <body translate="no">
@@ -61,31 +98,30 @@ html,body{
 <script id="rendered-js">
 var map = L.map("map", {
   center: [25.040959, 121.553324],
-  zoom: 20
+  zoom: 12
 });
 
 
 
 var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	maxZoom: 19,
+	//maxZoom: 19,
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
 
 var circle = L.circle([25.040959, 121.553324],   // 圓心座標
-1000,                // 半徑（公尺）
+100,                // 半徑（公尺）
 {
   color: 'skyblue',      // 線條顏色
   fillColor: '#00298a', // 填充顏色
   fillOpacity: 0.1   // 透明度
-}
-).addTo(map);
+}).addTo(map);
 
 
 var Icon1 = new L.Icon({
   iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/icons8-cocktail1.png?raw=true',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  iconSize: [200, 200],
+  iconSize: [86, 86],
   iconAnchor: [43, 86],
   popupAnchor: [1, -86],
   shadowSize: [10, 10]
@@ -94,7 +130,7 @@ var Icon1 = new L.Icon({
 var Icon2 = new L.Icon({
   iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/icons8-cocktail2.png?raw=true',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  iconSize: [200, 200],
+  iconSize: [86, 86],
   iconAnchor: [43, 86],
   popupAnchor: [1, -86],
   shadowSize: [10, 10]
@@ -103,19 +139,19 @@ var Icon2 = new L.Icon({
 var Icon3 = new L.Icon({
     iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/icons8-cocktail3.png?raw=true',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-    iconSize: [200, 200],
-    iconAnchor: [43, 86],
-    popupAnchor: [1, -86],
-    shadowSize: [10, 10]
+  iconSize: [86, 86],
+  iconAnchor: [43, 86],
+  popupAnchor: [1, -86],
+  shadowSize: [10, 10]
 });
 
 var blackIcon = new L.Icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-    iconSize: [86, 86],
-    iconAnchor: [43, 86],
-    popupAnchor: [1, -86],
-    shadowSize: [10, 10]
+  iconSize: [86, 86],
+  iconAnchor: [43, 86],
+  popupAnchor: [1, -86],
+  shadowSize: [10, 10]
 });
 
 var markers = new L.MarkerClusterGroup().addTo(map);;
@@ -140,17 +176,17 @@ xhr.onload = function () {
             imageIcon = Icon3;
         
         //設定酒吧經緯度和 Popup 內容
-        var mark = L.marker([
+         var mark = L.marker([
             data[i].geometry.location.lat,
             data[i].geometry.location.lng
         ], { icon: imageIcon }
         ).bindPopup(
-            '<h1 class="popup-name"> ' + 
-                data[i].name + '<h1/>' +
-            '<h1 class="popup-star">  [ 星級 ] ' + 
-                data[i].rating + '<h1/>' +
-            '<h1 class="popup-address">[ 地址 ] ' + 
-                data[i].vicinity + '<h1/>', { minWidth: 500 ,maxHeight: 500});
+            '<p class="popup-name"> ' + 
+                data[i].name + '<p/>' +
+            '<p class="popup-star">   評分數 : ' + 
+                data[i].rating + '<p/>' +
+            '<p class="popup-address">地址 : ' + 
+                data[i].vicinity + '<p/>', { minWidth:600 ,maxHeight: 500});
         //將圖標加入圖層
         markers.addLayer(mark);
     }
