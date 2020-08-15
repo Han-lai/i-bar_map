@@ -1,10 +1,10 @@
 <html lang="en"><head>
 <meta charset="UTF-8">
 <link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
-<meta name="apple-mobile-web-app-title" content="i_bar_map">
+<meta name="apple-mobile-web-app-title" content="LAI-SHI-HAN">
 <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
 <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
-<title>i_bar_map</title>
+<title>i-bar</title>
 <style>
 html,body{
   width: 100%;
@@ -39,12 +39,12 @@ html,body{
 	.marker-cluster div {
 		width: 30px;
 		height: 30px;
-		margin-left: 5px;
+		margin-left: 15px;
 		margin-top: 5px;
 
 		text-align: center;
 		border-radius: 15px;
-		font: 25px "Helvetica Neue", Arial, Helvetica, sans-serif;
+		font: 30px "Helvetica Neue", Arial, Source Sans Pro, sans-serif;
 		}
 	.marker-cluster span {
 		line-height: 30px;
@@ -55,23 +55,49 @@ html,body{
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css">
-<div id="map" class="leaflet-container leaflet-fade-anim leaflet-grab leaflet-touch-drag" tabindex="0" style="position: relative;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 260px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" role="presentation" src="https://c.tile.openstreetmap.org/17/109790/56115.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-84px, 157px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://b.tile.openstreetmap.org/17/109790/56114.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-84px, -99px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://a.tile.openstreetmap.org/17/109790/56116.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-84px, 413px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://a.tile.openstreetmap.org/17/109790/56113.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-84px, -355px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://b.tile.openstreetmap.org/17/109790/56117.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-84px, 669px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"><img src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -43px; margin-top: -86px; width: 41px; height: 41px; transform: translate3d(144px, 725px, 0px);"><img src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -43px; margin-top: -86px; width: 41px; height: 41px; transform: translate3d(265px, -149px, 0px);"><img src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -43px; margin-top: -86px; width: 41px; height: 41px; transform: translate3d(-28px, 122px, 0px);"><img src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -43px; margin-top: -86px; width: 41px; height: 41px; transform: translate3d(-113px, 379px, 0px);"><img src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -43px; margin-top: -86px; width: 41px; height: 41px; transform: translate3d(-66px, -329px, 0px);"><img src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -43px; margin-top: -86px; width: 41px; height: 41px; transform: translate3d(152px, -319px, 0px);"><img src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -43px; margin-top: -86px; width: 41px; height: 41px; transform: translate3d(-36px, -483px, 0px);"><img src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -43px; margin-top: -86px; width: 41px; height: 41px; transform: translate3d(214px, 1199px, 0px);"><img src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -43px; margin-top: -86px; width: 41px; height: 41px; transform: translate3d(141px, 1594px, 0px);"></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="160" height="1130" viewBox="-13 -354 160 1130" style="transform: translate3d(-13px, -354px, 0px);"><g></g></svg></div><div class="leaflet-pane leaflet-marker-pane"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -43px; margin-top: -86px; width: 56px; height: 56px; transform: translate3d(144px, 725px, 0px); z-index: 725;"><img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -43px; margin-top: -86px; width: 56px; height: 56px; transform: translate3d(265px, -149px, 0px); z-index: -149;"><img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -43px; margin-top: -86px; width: 56px; height: 56px; transform: translate3d(-28px, 122px, 0px); z-index: 122;"><img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -43px; margin-top: -86px; width: 56px; height: 56px; transform: translate3d(-113px, 379px, 0px); z-index: 379;"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -43px; margin-top: -86px; width: 56px; height: 56px; transform: translate3d(-66px, -329px, 0px); z-index: -329;"><img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -43px; margin-top: -86px; width: 56px; height: 56px; transform: translate3d(152px, -319px, 0px); z-index: -319;"><img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -43px; margin-top: -86px; width: 56px; height: 56px; transform: translate3d(-36px, -483px, 0px); z-index: -483;"><img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -43px; margin-top: -86px; width: 56px; height: 56px; transform: translate3d(214px, 1199px, 0px); z-index: 1199;"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -43px; margin-top: -86px; width: 56px; height: 56px; transform: translate3d(141px, 1594px, 0px); z-index: 1594;"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(2.81064e+07px, 1.43655e+07px, 0px) scale(65536);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> | © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors</div></div></div></div>
+<div id="map" class="leaflet-container leaflet-fade-anim leaflet-grab leaflet-touch-drag" tabindex="0" style="position: relative;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(-198px, -376px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(-1230px, -3084px, 0px) scale(2);"></div><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 19; transform: translate3d(-410px, -1028px, 0px) scale(1);"><img alt="" role="presentation" src="https://c.tile.openstreetmap.org/19/439165/224455.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(408px, 1776px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://a.tile.openstreetmap.org/19/439166/224455.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(664px, 1776px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://b.tile.openstreetmap.org/19/439165/224454.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(408px, 1520px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://c.tile.openstreetmap.org/19/439166/224454.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(664px, 1520px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://a.tile.openstreetmap.org/19/439165/224456.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(408px, 2032px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://b.tile.openstreetmap.org/19/439166/224456.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(664px, 2032px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://b.tile.openstreetmap.org/19/439164/224455.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(152px, 1776px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://b.tile.openstreetmap.org/19/439167/224455.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(920px, 1776px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://a.tile.openstreetmap.org/19/439164/224454.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(152px, 1520px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://a.tile.openstreetmap.org/19/439167/224454.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(920px, 1520px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://c.tile.openstreetmap.org/19/439164/224456.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(152px, 2032px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://c.tile.openstreetmap.org/19/439167/224456.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(920px, 2032px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://a.tile.openstreetmap.org/19/439165/224453.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(408px, 1264px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://b.tile.openstreetmap.org/19/439166/224453.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(664px, 1264px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://b.tile.openstreetmap.org/19/439165/224457.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(408px, 2288px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://c.tile.openstreetmap.org/19/439166/224457.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(664px, 2288px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://c.tile.openstreetmap.org/19/439164/224453.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(152px, 1264px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://c.tile.openstreetmap.org/19/439167/224453.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(920px, 1264px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://a.tile.openstreetmap.org/19/439164/224457.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(152px, 2288px, 0px); opacity: 1;"><img alt="" role="presentation" src="https://a.tile.openstreetmap.org/19/439167/224457.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(920px, 2288px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"><img src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -43px; margin-top: -86px; width: 10px; height: 10px; transform: translate3d(264px, 1797px, 0px); opacity: 1;"><img src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -43px; margin-top: -86px; width: 10px; height: 10px; transform: translate3d(114px, 805px, 0px); opacity: 1;"><img src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png" class="leaflet-marker-shadow leaflet-zoom-animated" alt="" style="margin-left: -43px; margin-top: -86px; width: 10px; height: 10px; transform: translate3d(364px, 650px, 0px); opacity: 1;"></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="160" height="1130" viewBox="185 282 160 1130" style="transform: translate3d(185px, 282px, 0px);"><g><path class="leaflet-interactive" stroke="skyblue" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#00298a" fill-opacity="0.1" fill-rule="evenodd" d="M-2715.1718670278788,944.812749452889a3701,3701 0 1,0 7402,0 a3701,3701 0 1,0 -7402,0 "></path></g></svg></div><div class="leaflet-pane leaflet-marker-pane"><img src="https://github.com/Han-lai/i-bar_map/blob/master/icons8-cocktail2.png?raw=true" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -43px; margin-top: -86px; width: 200px; height: 200px; transform: translate3d(264px, 1797px, 0px); z-index: 1797; opacity: 1;"><img src="https://github.com/Han-lai/i-bar_map/blob/master/icons8-cocktail3.png?raw=true" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -43px; margin-top: -86px; width: 200px; height: 200px; transform: translate3d(114px, 805px, 0px); z-index: 805; opacity: 1; outline: none;"><img src="https://github.com/Han-lai/i-bar_map/blob/master/icons8-cocktail2.png?raw=true" class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" alt="" tabindex="0" style="margin-left: -43px; margin-top: -86px; width: 200px; height: 200px; transform: translate3d(364px, 650px, 0px); z-index: 650; opacity: 1;"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"><div class="leaflet-popup  leaflet-zoom-animated" style="opacity: 1; transform: translate3d(115px, 719px, 0px); bottom: -7px; left: -271px;"><div class="leaflet-popup-content-wrapper"><div class="leaflet-popup-content" style="width: 501px;"><h1 class="popup-name"> 蘇洛酒吧</h1><h1></h1><h1 class="popup-star">  [ 星級 ] 3.9</h1><h1></h1><h1 class="popup-address">[ 地址 ] 大安區忠孝東路四段172號神旺飯店1樓</h1><h1></h1></div></div><div class="leaflet-popup-tip-container"><div class="leaflet-popup-tip"></div></div><a class="leaflet-popup-close-button" href="#close">×</a></div></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(1.12427e+08px, 5.74606e+07px, 0px) scale(262144);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in leaflet-disabled" href="#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> | © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors</div></div></div></div>
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
 <script id="rendered-js">
 var map = L.map("map", {
   center: [25.040959, 121.553324],
-  zoom: 16.5
+  zoom: 20
 });
 
-L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+
+
+var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
-	attribution: 
-  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
+
+
+// ------------------------------------------------
+// // setView 可以設定地圖座標
+// // watch 則是持續監聽使用者的位置
+// map.locate({setView: true, watch: true});
+// // 成功監聽到使用者的位置時觸發
+// map.on('locationfound', onLocationFound);
+// // 失敗時觸發
+// map.on('locationerror', onLocationError);
+// function onLocationFound(e) {
+// }
+// function onLocationError(e) {
+// }
+
+// function onLocationFound(e) {
+//   var myLocation = e.latlng // 使用者位置
+// 　var bookstore = L.latLng(25.129836537742896, 121.74017250433087) // 書店
+//   console.log(myLocation.distanceTo(bookstore)) // 計算使用者和書店的距離
+// }
+
+// -----------------------------------------
+
+
+
     var circle = L.circle([25.040959, 121.553324],   // 圓心座標
-      500,                // 半徑（公尺）
+     1000,                // 半徑（公尺）
       {
           color: 'skyblue',      // 線條顏色
           fillColor: '#00298a', // 填充顏色
@@ -80,29 +106,28 @@ L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
     ).addTo(map);
 
 
-
 var Icon1 = new L.Icon({
-  iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/alcohol1.png?raw=true',
+  iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/icons8-cocktail1.png?raw=true',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  iconSize: [86, 86],
+  iconSize: [200, 200],
   iconAnchor: [43, 86],
   popupAnchor: [1, -86],
   shadowSize: [10, 10]
 });
 
 var Icon2 = new L.Icon({
-  iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/alcohol2.png?raw=true',
+  iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/icons8-cocktail2.png?raw=true',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  iconSize: [86, 86],
+  iconSize: [200, 200],
   iconAnchor: [43, 86],
   popupAnchor: [1, -86],
   shadowSize: [10, 10]
 });
 
 var Icon3 = new L.Icon({
-    iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/alcohol3.png?raw=true',
+    iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/icons8-cocktail3.png?raw=true',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-    iconSize: [86, 86],
+    iconSize: [200, 200],
     iconAnchor: [43, 86],
     popupAnchor: [1, -86],
     shadowSize: [10, 10]
@@ -117,7 +142,6 @@ var blackIcon = new L.Icon({
     shadowSize: [10, 10]
 });
 
-var imageClass = [" blackIcon", "redIcon", "yellowIcon", "blueIcon"];
 var markers = new L.MarkerClusterGroup().addTo(map);;
 //在中心座標，放上黑色定位圖標
 //L.marker([25.037801, 121.548855], { icon: blackIcon }).addTo(map);
@@ -138,19 +162,19 @@ xhr.onload = function () {
             imageIcon = Icon2;
         else if (data[i].rating > 3.0)
             imageIcon = Icon3;
-
+        
         //設定藥局經緯度和 Popup 內容
         var mark = L.marker([
             data[i].geometry.location.lat,
             data[i].geometry.location.lng
         ], { icon: imageIcon }
         ).bindPopup(
-            '<h1 class="popup-name">      ' + 
+            '<h1 class="popup-name"> ' + 
                 data[i].name + '<h1/>' +
-            '<p class="popup-star">  [ 星級 ] ' + 
-                data[i].rating + '<p/>' +
-            '<p class="popup-address">[ 地址 ] ' + 
-                data[i].vicinity + '<p/>');
+            '<h1 class="popup-star">  [ 星級 ] ' + 
+                data[i].rating + '<h1/>' +
+            '<h1 class="popup-address">[ 地址 ] ' + 
+                data[i].vicinity + '<h1/>', { minWidth: 500 ,maxHeight: 500});
         //將圖標加入圖層
         markers.addLayer(mark);
     }
