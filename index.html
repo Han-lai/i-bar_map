@@ -84,7 +84,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 var Icon1 = new L.Icon({
   iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/alcohol1.png?raw=true',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  iconSize: [66, 66],
+  iconSize: [86, 86],
   iconAnchor: [43, 86],
   popupAnchor: [1, -86],
   shadowSize: [10, 10]
@@ -93,7 +93,7 @@ var Icon1 = new L.Icon({
 var Icon2 = new L.Icon({
   iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/alcohol2.png?raw=true',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  iconSize: [66, 66],
+  iconSize: [86, 86],
   iconAnchor: [43, 86],
   popupAnchor: [1, -86],
   shadowSize: [10, 10]
@@ -102,7 +102,7 @@ var Icon2 = new L.Icon({
 var Icon3 = new L.Icon({
     iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/alcohol3.png?raw=true',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-    iconSize: [66, 66],
+    iconSize: [86, 86],
     iconAnchor: [43, 86],
     popupAnchor: [1, -86],
     shadowSize: [10, 10]
@@ -111,7 +111,7 @@ var Icon3 = new L.Icon({
 var blackIcon = new L.Icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-    iconSize: [66, 66],
+    iconSize: [86, 86],
     iconAnchor: [43, 86],
     popupAnchor: [1, -86],
     shadowSize: [10, 10]
@@ -145,7 +145,7 @@ xhr.onload = function () {
             data[i].geometry.location.lng
         ], { icon: imageIcon }
         ).bindPopup(
-            '<h1 class="popup-name"> [  店名 ]' + 
+            '<h1 class="popup-name">      ' + 
                 data[i].name + '<h1/>' +
             '<p class="popup-star">  [ 星級 ] ' + 
                 data[i].rating + '<p/>' +
