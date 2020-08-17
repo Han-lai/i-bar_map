@@ -165,7 +165,7 @@ var markers = new L.MarkerClusterGroup().addTo(map);;
 
 
 var xhr = new XMLHttpRequest();
-xhr.open('get', 'https://raw.githubusercontent.com/Han-lai/i-bar_map/master/taipei_bar.json');
+xhr.open('get', 'https://raw.githubusercontent.com/Han-lai/i-bar_map/master/bar_location/taipei_bar.json');
 xhr.send();
 xhr.onload = function () {
     var data = JSON.parse(xhr.responseText).results;
