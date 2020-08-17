@@ -11,15 +11,12 @@ html,body{
   width: 100%;
   height: 100%;
 }
-@media (min-width: 600px) {
-  p {
-    font-size: 30px;
-  }
-}
-map {
+
+#map {
     width: 100%;
     height: 100%;
 }
+
 
 
 .marker-cluster-small {
@@ -93,6 +90,7 @@ map {
 }
 </style>
 </head>
+	
 <body translate="no">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css">
@@ -109,54 +107,79 @@ var map = L.map("map", {
 
 
 var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	//maxZoom: 19,
+	maxZoom: 19,
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
 
-var circle = L.circle([25.040959, 121.553324],   // 圓心座標
-1000,                // 半徑（公尺）
-{
-  color: 'skyblue',      // 線條顏色
-  fillColor: '#00298a', // 填充顏色
-  fillOpacity: 0.1   // 透明度
-}).addTo(map);
+
+// ------------------------------------------------
+// // setView 可以設定地圖座標
+// // watch 則是持續監聽使用者的位置
+// map.locate({setView: true, watch: true});
+// // 成功監聽到使用者的位置時觸發
+// map.on('locationfound', onLocationFound);
+// // 失敗時觸發
+// map.on('locationerror', onLocationError);
+// function onLocationFound(e) {
+// }
+// function onLocationError(e) {
+// }
+
+// function onLocationFound(e) {
+//   var myLocation = e.latlng // 使用者位置
+// 　var bookstore = L.latLng(25.129836537742896, 121.74017250433087) // 酒吧
+//   console.log(myLocation.distanceTo(bookstore)) // 計算使用者和酒吧的距離
+// }
+
+// -----------------------------------------
+
+
+
+    var circle = L.circle([25.040959, 121.553324],   // 圓心座標
+     100,                // 半徑（公尺）
+      {
+          color: 'skyblue',      // 線條顏色
+          fillColor: '#00298a', // 填充顏色
+          fillOpacity: 0.1   // 透明度
+      }
+    ).addTo(map);
 
 
 var Icon1 = new L.Icon({
   iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/icons8-cocktail1.png?raw=true',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  iconSize: [86, 86],
-  iconAnchor: [43, 86],
-  popupAnchor: [1, -86],
-  shadowSize: [10, 10]
+    iconSize: [96, 96],
+    iconAnchor: [43, 96],
+    popupAnchor: [1, -96],
+    shadowSize: [10, 10]
 });
 
 var Icon2 = new L.Icon({
   iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/icons8-cocktail2.png?raw=true',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  iconSize: [86, 86],
-  iconAnchor: [43, 86],
-  popupAnchor: [1, -86],
-  shadowSize: [10, 10]
+    iconSize: [96, 96],
+    iconAnchor: [43, 96],
+    popupAnchor: [1, -96],
+    shadowSize: [10, 10]
 });
 
 var Icon3 = new L.Icon({
     iconUrl: 'https://github.com/Han-lai/i-bar_map/blob/master/icons8-cocktail3.png?raw=true',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  iconSize: [86, 86],
-  iconAnchor: [43, 86],
-  popupAnchor: [1, -86],
-  shadowSize: [10, 10]
+    iconSize: [96, 96],
+    iconAnchor: [43, 96],
+    popupAnchor: [1, -96],
+    shadowSize: [10, 10]
 });
 
 var blackIcon = new L.Icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  iconSize: [86, 86],
-  iconAnchor: [43, 86],
-  popupAnchor: [1, -86],
-  shadowSize: [10, 10]
+    iconSize: [96, 96],
+    iconAnchor: [43, 96],
+    popupAnchor: [1, -96],
+    shadowSize: [10, 10]
 });
 
 var markers = new L.MarkerClusterGroup().addTo(map);;
@@ -181,7 +204,7 @@ xhr.onload = function () {
             imageIcon = Icon3;
         
         //設定酒吧經緯度和 Popup 內容
-         var mark = L.marker([
+        var mark = L.marker([
             data[i].geometry.location.lat,
             data[i].geometry.location.lng
         ], { icon: imageIcon }
