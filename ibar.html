@@ -1,7 +1,7 @@
 <html lang="en"><head>
 <meta charset="UTF-8">
 <link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
-<meta name="apple-mobile-web-app-title" content="CodePen">
+<meta name="apple-mobile-web-app-title" content="lai-shi-han">
 <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
 <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
 <title>i-bar</title>
@@ -17,19 +17,18 @@ html,body{
 }
 
 
-
 .marker-cluster-small {
-		background-color: rgba(181, 226, 140, 0.6);
+		background-color: rgba(240, 194, 12, 0.6);
 		}
 	.marker-cluster-small div {
-		background-color: rgba(110, 204, 57, 0.6);
+		background-color: rgba(241, 211, 87, 0.6);
 		}
 
 	.marker-cluster-medium {
-		background-color: rgba(241, 211, 87, 0.6);
+		background-color: rgba(110, 204, 57, 0.6);
 		}
 	.marker-cluster-medium div {
-		background-color: rgba(240, 194, 12, 0.6);
+		background-color: rgba(181, 226, 140, 0.6);
 		}
 
 	.marker-cluster-large {
@@ -134,7 +133,6 @@ var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{
 
 
 
-<<<<<<< HEAD
 var circle = L.circle([25.040959, 121.553324],   // 圓心座標
  100,                // 半徑（公尺）
   {
@@ -143,16 +141,6 @@ var circle = L.circle([25.040959, 121.553324],   // 圓心座標
       fillOpacity: 0.1   // 透明度
   }
 ).addTo(map);
-=======
-    var circle = L.circle([25.040959, 121.553324],   // 圓心座標
-     100,                // 半徑（公尺）
-      {
-          color: 'skyblue',      // 線條顏色
-          fillColor: '#00298a', // 填充顏色
-          fillOpacity: 0.1   // 透明度
-      }
-    ).addTo(map);
->>>>>>> 5acc09fb2af27bfc9d39cf929245ab6649996cdc
 
 
 var Icon1 = new L.Icon({
@@ -212,11 +200,7 @@ xhr.onload = function () {
         else if (data[i].rating > 3.0)
             imageIcon = Icon3;
         
-<<<<<<< HEAD
         //設定酒吧經緯度和 Popup 內容
-=======
-        //設定藥局經緯度和 Popup 內容
->>>>>>> 5acc09fb2af27bfc9d39cf929245ab6649996cdc
         var mark = L.marker([
             data[i].geometry.location.lat,
             data[i].geometry.location.lng
