@@ -110,23 +110,23 @@ var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{
 
 
 
-// ------------------------------------------------
-// // setView 可以設定地圖座標
-// // watch 則是持續監聽使用者的位置
-// map.locate({setView: true, watch: true});
-// // 成功監聽到使用者的位置時觸發
-// map.on('locationfound', onLocationFound);
-// // 失敗時觸發
-// map.on('locationerror', onLocationError);
-// function onLocationFound(e) {
-// }
-// function onLocationError(e) {
-// }
+//------------------------------------------------
+// setView 可以設定地圖座標
+// watch 則是持續監聽使用者的位置
+map.locate({setView: true, watch: true});
+// 成功監聽到使用者的位置時觸發
+map.on('locationfound', onLocationFound);
+// 失敗時觸發
+map.on('locationerror', onLocationError);
+function onLocationFound(e) {
+}
+function onLocationError(e) {
+}
 
-// function onLocationFound(e) {
-//   var myLocation = e.latlng // 使用者位置
-// 　var bookstore = L.latLng(25.129836537742896, 121.74017250433087) // 書店
-//   console.log(myLocation.distanceTo(bookstore)) // 計算使用者和書店的距離
+function onLocationFound(e) {
+  var myLocation = e.latlng // 使用者位置
+　var bar = L.latLng(24.964375, 121.193070) // 酒吧
+  console.log(myLocation.distanceTo(bar)) // 計算使用者和酒吧的距離
 // }
 
 // -----------------------------------------
@@ -138,6 +138,15 @@ var circle = L.circle([25.040959, 121.553324],   // 圓心座標
   {
       color: 'skyblue',      // 線條顏色
       fillColor: '#00298a', // 填充顏色
+      fillOpacity: 0.1   // 透明度
+  }
+).addTo(map);
+
+var circle = L.circle([24.966770, 121.191526],   // 圓心座標
+ 100,                // 半徑（公尺）
+  {
+      color: 'orange',      // 線條顏色
+      fillColor: '#FF5809', // 填充顏色
       fillOpacity: 0.1   // 透明度
   }
 ).addTo(map);
@@ -185,7 +194,7 @@ var markers = new L.MarkerClusterGroup().addTo(map);;
 
 
 var xhr = new XMLHttpRequest();
-xhr.open('get', 'https://raw.githubusercontent.com/Han-lai/i-bar_map/master/bar_location/taipei_bar.json');
+xhr.open('get', 'https://raw.githubusercontent.com/Han-lai/i-bar_map/master/bar_location/taipei_taotuan.json');
 xhr.send();
 xhr.onload = function () {
     var data = JSON.parse(xhr.responseText).results;
