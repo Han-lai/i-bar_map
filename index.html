@@ -111,26 +111,26 @@ var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{
 
 
 
-// // ------------------------------------------------
-// // setView 可以設定地圖座標
-// // watch 則是持續監聽使用者的位置
-// map.locate({setView: true, watch: true});
-// // 成功監聽到使用者的位置時觸發
-// map.on('locationfound', onLocationFound);
-// // 失敗時觸發
-// map.on('locationerror', onLocationError);
-// function onLocationFound(e) {
-// }
-// function onLocationError(e) {
-// }
+// ------------------------------------------------
+// setView 可以設定地圖座標
+// watch 則是持續監聽使用者的位置
+map.locate({setView: true, watch: true});
+// 成功監聽到使用者的位置時觸發
+map.on('locationfound', onLocationFound);
+// 失敗時觸發
+map.on('locationerror', onLocationError);
+function onLocationFound(e) {
+}
+function onLocationError(e) {
+}
 
-// function onLocationFound(e) {
-//   var myLocation = e.latlng // 使用者位置
-// 　var bookstore = L.latLng(24.964526, 121.193120) // 酒吧
-//   console.log(myLocation.distanceTo(bookstore)) // 計算使用者和酒吧的距離
-// }
+function onLocationFound(e) {
+  var myLocation = e.latlng // 使用者位置
+　var bookstore = L.latLng(24.964526, 121.193120) // 酒吧
+  console.log(myLocation.distanceTo(bookstore)) // 計算使用者和酒吧的距離
+}
 
-// -----------------------------------------
+-----------------------------------------
 
 
 
